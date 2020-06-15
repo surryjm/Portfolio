@@ -1,0 +1,162 @@
+:root {
+  --main-text-color: #3c3c3c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: var(--main-text-color);
+}
+
+.container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto auto;
+  grid-gap: 15px;
+  justify-items: center;
+  grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "footer";
+}
+
+.main-header {
+  grid-area: header;
+}
+
+.main-nav {
+  grid-area: nav;
+}
+
+.section {
+  grid-area: main;
+}
+
+.main-footer {
+  grid-area: footer;
+}
+
+.main-nav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-items {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.main-header h1 {
+  text-align: center;
+}
+
+.section h2 {
+  text-align: center;
+}
+
+.article h3 {
+  text-align: center;
+}
+
+.article {
+  margin: 2rem;
+}
+
+.figure {
+  position: relative;
+}
+
+.img-overlay {
+  overlay: hidden;
+  opacity: 0;
+  transition: .3s ease;
+  background-color: rgba(0, 0, 0, .7);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.figure:hover .img-overlay {
+  opacity: 1;
+}
+
+.figcaption-text {
+  color: #ffffff;
+  margin: auto;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+}
+/*
+.figure:hover {
+  opacity: .5;
+  background-color: rgba(0, 0, 0, .7);
+  overflow: hidden;
+  transition: .3s ease;
+  height: 100%;
+}*/
+
+/*
+.figcaption-text {
+  color: #ffffff;
+  text-align: center;
+  margin: auto;
+}
+*/
+/*
+@media (min-width: 500px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "header nav"
+      "main main"
+      "footer footer";
+  }
+
+  .main-nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .nav-items {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+@media (min-width: 700px) {
+  .container {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "header header nav"
+      "main main main"
+      "footer footer footer";
+  }
+
+  .main-nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .nav-items {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
