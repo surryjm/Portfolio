@@ -10,28 +10,24 @@ body {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   color: var(--main-text-color);
+  font-size: 16px;
 }
 
 .container {
   width: 100%;
   display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto auto auto auto;
-  grid-gap: 15px;
-  justify-items: center;
+  grid-template-columns: 2% auto 2%;
+  grid-template-rows: auto auto auto;
+  grid-gap: 20px;
+  /*justify-items: center;*/
   grid-template-areas:
-    "header"
-    "nav"
-    "main"
-    "footer";
+    ". header ."
+    ". main ."
+    ". footer .";
 }
 
 .main-header {
   grid-area: header;
-}
-
-.main-nav {
-  grid-area: nav;
 }
 
 .section {
@@ -42,23 +38,25 @@ body {
   grid-area: footer;
 }
 
+.main-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .main-nav ul {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 0;
-  padding: 0;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .nav-items {
-  display: flex;
   list-style-type: none;
-  justify-content: center;
-  margin-top: 20px;
 }
 
 .main-header h1 {
-  text-align: center;
+
 }
 
 .section h2 {
@@ -70,53 +68,56 @@ body {
 }
 
 .article {
-  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 4rem;
 }
 
+.project-images {
+  border: 1px solid #dcdcdc;
+
+}
+
+.figcaption-text {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.main-footer {
+  margin: auto;
+}
+
+/*
 .figure {
   position: relative;
-}
-
-.img-overlay {
-  overlay: hidden;
-  opacity: 0;
-  transition: .3s ease;
-  background-color: rgba(0, 0, 0, .7);
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-}
-
-.figure:hover .img-overlay {
-  opacity: 1;
-}
-
-.figcaption-text {
-  color: #ffffff;
-  margin: auto;
-  text-align: center;
-  top: 50%;
-  left: 50%;
-}
-/*
-.figure:hover {
-  opacity: .5;
-  background-color: rgba(0, 0, 0, .7);
   overflow: hidden;
-  transition: .3s ease;
-  height: 100%;
-}*/
+}
 
-/*
+.project-images:hover {
+  opacity: .3;
+}
+
 .figcaption-text {
   color: #ffffff;
-  text-align: center;
+  position: absolute;
   margin: auto;
+  text-align: center;
+  top: 45%;
+  left: 33%;
+  font-size: 1.5rem;
+}
+
+.img-overlay:hover {
+  background: #000000;
+  transition: .6s ease;
+  color: #ffffff;
 }
 */
+
+
+
 /*
 @media (min-width: 500px) {
   .container {
