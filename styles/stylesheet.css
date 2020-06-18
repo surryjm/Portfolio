@@ -1,15 +1,10 @@
-:root {
-  --main-text-color: #3c3c3c;
-}
-
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-  color: var(--main-text-color);
+  font-family: 'Roboto', 'Montserrat', sans-serif;
+  color: #000000;
   font-size: 16px;
 }
 
@@ -19,7 +14,6 @@ body {
   grid-template-columns: 2% auto 2%;
   grid-template-rows: auto auto auto;
   grid-gap: 20px;
-  /*justify-items: center;*/
   grid-template-areas:
     ". header ."
     ". main ."
@@ -43,44 +37,74 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+
 }
 
 .main-nav ul {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
 }
 
 .nav-items {
   list-style-type: none;
+  margin-left: 50px;
+  text-transform: uppercase;
+  color: #000000;
+  letter-spacing: 1px;
 }
 
 .main-header h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #000000;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+a {
+  color: #000000;
+  font-weight: bold;
+  text-decoration: none;
 
 }
 
 .section h2 {
   text-align: center;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 
-.article h3 {
-  text-align: center;
+.intro-description {
+  margin-bottom: 5rem;
 }
+
+h3 {
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.article h4 {
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+
 
 .article {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 4rem;
+  margin-bottom: 1rem;
 }
 
 .project-images {
   border: 1px solid #dcdcdc;
-
 }
 
 .figcaption-text {
-  margin-top: 20px;
+  margin-top: 15px;
   text-align: center;
   font-size: 1.2rem;
 }
