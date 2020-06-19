@@ -11,7 +11,7 @@ body {
 .container {
   width: 100%;
   display: grid;
-  grid-template-columns: 2% auto 2%;
+  grid-template-columns: 5% auto 5%;
   grid-template-rows: auto auto auto;
   grid-gap: 20px;
   grid-template-areas:
@@ -37,7 +37,7 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-
+  height: 6rem;
 }
 
 .main-nav ul {
@@ -54,11 +54,23 @@ body {
 }
 
 .main-header h1 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 600;
   color: #000000;
   text-transform: uppercase;
   letter-spacing: 1px;
+  margin-left: 15px;
+  margin-bottom: .10rem;
+}
+
+.header-logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-subtitle {
+  margin-left: 15px;
+  margin-top: .15rem;
 }
 
 a {
@@ -69,13 +81,21 @@ a {
 }
 
 .section h2 {
+  font-size: 4rem;
   text-align: center;
   font-weight: 600;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
+  margin-top: 7rem;
 }
 
 .intro-description {
+  font-size: 2rem;
   margin-bottom: 5rem;
+  letter-spacing: 2px;
+}
+
+.nav-section {
+
 }
 
 h3 {
@@ -140,8 +160,6 @@ h3 {
 }
 */
 
-
-
 /*
 @media (min-width: 500px) {
   .container {
@@ -163,13 +181,14 @@ h3 {
     margin-right: 20px;
   }
 }
+*/
 
 @media (min-width: 700px) {
   .container {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto auto auto;
     grid-template-areas:
-      "header header nav"
+      "header header header"
       "main main main"
       "footer footer footer";
   }
