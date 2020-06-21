@@ -11,8 +11,8 @@ body {
 .container {
   min-height: 100vh;
   display: grid;
-  grid-template-columns: 5vw auto 5vw;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1.5vw auto 1.5vw;
+  grid-template-rows: 20vh 1fr 20vh;
   grid-gap: 20px;
   grid-template-areas:
     ". header ."
@@ -29,7 +29,7 @@ body {
 }
 
 .main-footer {
-  grid-area: 3/1/4/4;
+  grid-area: footer;
 }
 
 .main-header {
@@ -85,7 +85,7 @@ a {
   text-align: center;
   font-weight: 600;
   letter-spacing: 2px;
-  margin-top: 7rem;
+  margin-top: 4rem;
 }
 
 .intro-description {
@@ -181,7 +181,7 @@ h3 {
   }
 }
 */
-
+/*
 @media (min-width: 700px) {
   .container {
     grid-template-columns: 1fr 1fr 1fr;
@@ -203,26 +203,38 @@ h3 {
     margin-right: 20px;
   }
 }
-
+*/
 
 /*-----------------ABOUT ME and CONTACT-------------------*/
 
-.intro-name-about-contact {
+.intro-description-about-contact {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  letter-spacing: 2px;
+}
+
+/*-----------------ABOUT--------------------*/
+
+.intro-name-about {
   font-size: 3rem;
   text-align: center;
   font-weight: 600;
   letter-spacing: 2px;
-  margin-top: 7rem;
-  margin-bottom: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
 }
 
-.intro-description-about-contact {
-  font-size: 2rem;
-  margin-bottom: 10rem;
-  letter-spacing: 2px;
+.about-text {
+  width: 50vw;
 }
-
-
-
 
 /*-----------------CONTACT--------------------*/
+
+.intro-name-contact {
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
+}
