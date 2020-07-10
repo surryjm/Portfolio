@@ -63,18 +63,31 @@ body {
   color: #000000;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-left: 15px;
+  margin-left: 10px;
   margin-bottom: .10rem;
 }
 
 .header-logo-text {
   display: flex;
+  flex-direction: row;
+}
+
+.header-text {
+  display: flex;
   flex-direction: column;
 }
 
+.logo-image {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-top: .67em;
+}
+
 .main-subtitle {
-  margin-left: 15px;
+  margin-left: 10px;
   margin-top: .15rem;
+  font-weight: normal;
 }
 
 a {
