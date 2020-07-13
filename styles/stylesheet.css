@@ -33,11 +33,20 @@ body {
 }
 
 .main-header {
+  position: fixed;
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   height: 6rem;
+  background-color: #ffffff;
+  margin: -10px 20px 0px 20px;
+  z-index: 2;
+}
+
+.main-nav {
+  margin-right: 50px;
 }
 
 .main-nav ul {
@@ -45,16 +54,37 @@ body {
   flex-direction: row;
 }
 
+.links {
+  color: #000000;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.links-main-subtitle {
+  color: #000000;
+  font-weight: normal;
+  text-decoration: none;
+}
+
 .nav-items {
   list-style-type: none;
   margin-left: 50px;
   text-transform: uppercase;
-  color: #000000;
   letter-spacing: 1px;
 }
 
 .nav-links:hover {
-  color: #ffa0a0;
+  text-decoration: underline;
+  text-decoration-color: #833ab4;
+  transition: text-decoration 1s ease;
+}
+
+.gradient:hover {
+  background-color: #833ab4;
+  background-image: linear-gradient(90deg, #833ab4, #fd1d1d);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .main-header h1 {
@@ -84,16 +114,18 @@ body {
   margin-top: .67em;
 }
 
+.logo-image:hover {
+  transform: scale(1.1);
+  transition: transform .5s;
+}
+
+.main-title {
+  text-decoration: none;
+}
+
 .main-subtitle {
   margin-left: 10px;
   margin-top: .15rem;
-  font-weight: normal;
-}
-
-a {
-  color: #000000;
-  font-weight: bold;
-  text-decoration: none;
 }
 
 .intro-name {
@@ -120,6 +152,13 @@ h3 {
   letter-spacing: 1px;
 }
 
+.article-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .article h4 {
   text-align: center;
   font-weight: 400;
@@ -131,6 +170,12 @@ h3 {
   flex-direction: column;
   align-items: center;
   margin-bottom: 1rem;
+  justify-content: center;
+}
+
+.article:hover {
+  background-color: rgba(12, 242, 143, 0.2);
+  transition: background-color .7s ease;
 }
 
 .project-images {
@@ -164,16 +209,6 @@ h3 {
   margin-left: 15px;
   margin-top: 1px;
 }
-
-.fa-linkedin-in:hover {
-  color: #ffa0a0;
-}
-
-.fa-envelope:hover {
-  color: #ffa0a0;
-}
-
-
 
 /*
 .figure {
@@ -269,6 +304,20 @@ h3 {
   letter-spacing: 2px;
 }
 
+.article-about h4 {
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.article-about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+  justify-content: center;
+}
+
 /*-----------------CONTACT--------------------*/
 
 .intro-name-contact {
@@ -284,4 +333,18 @@ h3 {
   font-size: 1.5rem;
   margin-bottom: 2rem;
   letter-spacing: 2px;
+}
+
+.article-contact h4 {
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.article-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+  justify-content: center;
 }
